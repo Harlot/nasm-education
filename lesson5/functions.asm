@@ -7,7 +7,7 @@ slen:
 
 nextchar:
   cmp	byte [eax], 0
-  jmp	finished
+  jz	finished
   inc	eax
   jmp	nextchar
 
