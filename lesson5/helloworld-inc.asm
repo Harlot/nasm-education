@@ -7,25 +7,26 @@
 %include	'functions.asm'
 
 SECTION	.data
-; our fist message string
-msg1	db	'Hello, brave new world!', 0Ah
-; out second message string
-msg2	db	'This is how we recycle in NASM', 0Ah
 
-SECTION .text
-global _start
+msg1	db	'Hello brave new world', 0Ah
+; our fist message string
+msg2	db	'This is how we recycle in NASM' , 0Ah
+; out second message string
+
+SECTION	.text
+global	_start
 
 _start:
 
-  ; move the address of our first message string into EAX
   mov	eax, msg1
+  ; move the address of our first message string into EAX
+  call sprint
   ; call out string printing function
-  call sprint
 
-  ; move the address of our second message string into EAX
   mov	eax, msg2
-  ; call our string printing function
+  ; move the address of our second message string into EAX
   call sprint
+  ; call our string printing function
 
-  ; call our quit function
   call quit
+  ; call our quit function
