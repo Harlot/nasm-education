@@ -8,7 +8,7 @@
 %include 'functions.asm'
 
 SECTION .data
-msg1	db	'Pleast enter your name: ',0h
+msg1	db	'Please enter your name: ',0h
 ; message string asking user for input
 msg2	db	'Hello, ',0h
 ; message string to use after user has entered their name
